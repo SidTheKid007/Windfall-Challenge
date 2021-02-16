@@ -51,7 +51,7 @@
 * The Extra Trees Regressor was used to craft the probability (of $20k donated in the next 5 years) based propensity model. This works because the target variable is 1 or 0, and the Extra Trees Regressor uses the algorithmic framework of the Extra Trees Classifier with mean at the end (instead of mode).
 
 ### Hyperparameter Tuning
-* A gridsearch was run on Bootstrap, Criterion, and Max Features
+* A gridsearch was run on Bootstrap, Criterion, and Max Features.
 
 ### Results
 | Model | Description | Accuracy | F1 Score | AUC Score |
@@ -72,14 +72,14 @@ from sklearn.ensemble import ExtraTreesClassifier
 model = load('Windfall DS Challenge -- PTG/finalModel.joblib')
 model.predict(<Your Data>)
 ```
-In order to find the probability of new data producing over $20k over the next 5 years:
+In order to find the probability with new data:
 ```python
 from joblib import load
 from sklearn.ensemble import ExtraTreesRegressor
 model = load('Windfall DS Challenge -- PTG/finalPropensityModel.joblib')
 model.predict(<Your Data>)
 ```
-* <Your Data> needs to be formatted like the input data used to build the final model.
+* 'Your Data' needs to be formatted like the input data used to build the final model.
 
 ### Future Work
 * Removal of outlier donations (over 3.5 std deviations from the mean)
