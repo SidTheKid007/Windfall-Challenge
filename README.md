@@ -30,11 +30,11 @@
 
 ## Data Cleaning
 ### Attribute Engineering
-'Age' was removed because this attribute proved to be accurate for less than 18% of the donors.
-The data was grouped by 'cand_id' and 'Year' to provide insight on historic spending behaviors.
-Time was incorporated into the attribute set via a user record's current 'Year', the user's 'Start Year', and the user's 'Years Spent' ('Year' - 'Start Year')
-Spending Trends were incorporated into the records via a 'Rolling Total' of all donations made and a 'Rolling Average' to reflect the average donation per yer.
-The target variable was adjusted to record the sum of the donations of a user's next 5 years (from a record's year). That number was then further normalized into 0 or 1 depending on whether or not the sum exceeded 20k.
+* 'Age' was removed because this attribute proved to be accurate for less than 18% of the donors.
+* The data was grouped by 'cand_id' and 'Year' to provide insight on historic spending behaviors.
+* Time was incorporated into the attribute set via a user record's current 'Year', the user's 'Start Year', and the user's 'Years Spent' ('Year' - 'Start Year')
+* Spending Trends were incorporated into the records via a 'Rolling Total' of all donations made and a 'Rolling Average' to reflect the average donation per yer.
+* The target variable was adjusted to record the sum of the donations of a user's next 5 years (from a record's year). That number was then further normalized into 0 or 1 depending on whether or not the sum exceeded 20k.
 
 ### Data Removal
 * User Records after 2014 were removed. This is because the target variable in records after 2014 incorrectly depicts donations made over less than 5 years.
