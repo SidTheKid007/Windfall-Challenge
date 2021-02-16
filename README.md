@@ -32,12 +32,12 @@
 ### Attribute Engineering
 * 'Age' was removed because this attribute proved to be accurate for less than 18% of the donors.
 * The data was grouped by 'cand_id' and 'Year' to provide insight on historic spending behaviors.
-* Time was incorporated into the attribute set via a user record's current 'Year', the user's 'Start Year', and the user's 'Years Spent' ('Year' - 'Start Year')
-* Spending Trends were incorporated into the records via a 'Rolling Total' of all donations made and a 'Rolling Average' to reflect the average donation per yer.
-* The target variable was adjusted to record the sum of the donations of a user's next 5 years (from a record's year). That number was then further normalized into 0 or 1 depending on whether or not the sum exceeded 20k.
+* Time was incorporated into the attribute set via a user record's current 'Year', the user's 'Start Year', and the user's 'Years Spent' active.
+* Spending Trends were incorporated into the records via a 'Rolling Total' of all donations made and a 'Rolling Average' to reflect the average annual donation.
+* The target variable was adjusted to record the sum of the donations of a user's next 5 years (from a record's year). That number was then further normalized into 0 or 1 depending on whether or not that number exceeded 20k.
 
 ### Data Removal
-* User Records after 2014 were removed. This is because the target variable in records after 2014 incorrectly depicts donations made over less than 5 years.
+* User Records after 2014 were removed. This is because the target variables in records after 2014 incorrectly depict donations made over less than 5 years.
 * All rows in the fully merged dataset with atleast 1 null value were removed.  
 
 ### Feature Removal
@@ -45,7 +45,7 @@
 * The 5 attributes with the lowest importance were removed.
 
 ### Algorithm Selection
-* Algorithn Selection was dictated by looking at F1 Score. The F1 score is the harmonic mean of the precision and recall.
+* Algorithm Selection was dictated by looking at F1 Score. The F1 score is the harmonic mean of the precision and recall.
 * Overall Accuracy and AUC Score were also recorded.
 * The algorithm with the best F1 Score was the Extra Trees Classifier.
 * The Extra Trees Regressor was used to craft the probability (of $20k donated in the next 5 years) based propensity model. This works because the target variable is 1 or 0, and the Extra Trees Regressor uses the algorithmic framework of the Extra Trees Classifier with mean at the end (instead of mode).
@@ -85,4 +85,4 @@ model.predict(<Your Data>)
 * Removal of outlier donations (over 3.5 std deviations from the mean)
 * Normalization of input variables (via Standard Scalar)
 * More Hyperparameter tuning
-* Advanced ML Algorithms (via Keras, TPOT)
+* Advanced ML Algorithms (ex. Keras, TPOT)
