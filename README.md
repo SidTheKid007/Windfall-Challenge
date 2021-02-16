@@ -11,9 +11,9 @@
  
  [Donor Predictions](/WindFall_Predictions.ipynb) - This file runs various classification algorithms to try and predict whether or not a user will donate $20k in the next 5 years.
 
- [Final Classification Model](/Windfall DS Challenge -- PTG/finalModel.joblib) - This ML Model predicts whether or not a user will donate $20k in the next 5 years based on historic patterns.
+ [Final Classification Model](/Windfall%20DS%20Challenge%20--%20PTG/finalModel.joblib) - This ML Model predicts whether or not a user will donate $20k in the next 5 years based on historic patterns.
 
- [Final Propensity Model](/Windfall DS Challenge -- PTG/finalPropensityModel.joblib) - This ML Model returns the probability of a user donating $20k in the next 5 years based on historic patterns.
+ [Final Propensity Model](/Windfall%20DS%20Challenge%20--%20PTG/finalPropensityModel.joblib) - This ML Model returns the probability of a user donating $20k in the next 5 years based on historic patterns.
 
 ## Libaries Used
 ### Cleaning
@@ -61,6 +61,7 @@
 | **Extended Attributes** | Basic + More Attributes  | 0.9936 | 0.8798 | 0.9238 |
 | **Feature Optimized** | Extended Attributes - Unnecessary Attributes | 0.9936 | 0.8807 | 0.9249 |
 | **Hyperparameter Optimized** | Feature Optimized + modified criterion | 0.9936 | 0.8815 | 0.9274 |
+
 Final Model: **ExtraTreesClassifier with 23 Attributes and {bootstrap = False, criterion = 'entropy', max_features = 'sqrt'}**
 
 ## Usage Instructions
